@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data collector </title>
+
+    <link href="../static/main.css" rel="stylesheet"> 
+</head>
+<body>
+    
+
+<div class="container">
+
+
+<h1>Collecting heights</h1>
+<h3>Please fill the boxes</h3>
+<div class ="message">
+    {{text | safe}}
+</div>
+
+<form action = "{{url_for('success')}}" method="POST">
+<input title="your data will be safe with us" placeholder="enter email here" type="email" name="email_name" required>
+<br>
+<input title="your data will be safe with us" placeholder="enter height here" type="number" min = "50" max = "300"name="height_name" required>
+<br>
+<button type="submit">Submit</button>
+</form>
+
+</div>
+
+
+</body>
+</html>
